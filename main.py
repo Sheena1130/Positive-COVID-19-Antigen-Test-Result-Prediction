@@ -94,6 +94,7 @@ exp_num = 'local'
 func.get_data(date_start, date_end, mv_day, target_type, get_official=get_official, get_oxcgrt=get_oxcgrt, get_UMD=get_UMD) if get_data_or_not == True else print('Not getting data.')
 func.calc_corr(train_start, train_end, train_num, mv_day, data_num_thres, corr_thres, get_UMD=get_UMD) if calc_corr_or_not == True else print('Not calculating correlation.')
 target_range = func.data_sort(date_start, date_end, train_num, mv_day, day_num, get_official=get_official, get_oxcgrt=get_oxcgrt, get_UMD=get_UMD) if data_sort_or_not == True else print('Not sorting data.')
+print('target_range: ', target_range)
 
 # prediction
 func.prediction_DNN(exp_num, day_num, mv_day, target_only, config, target_range, print_process)
@@ -102,6 +103,9 @@ func.prediction_DNN(exp_num, day_num, mv_day, target_only, config, target_range,
 '''Training for total case prediction'''
 
 print('*Start predicting total cases*\n')
+
+target_type = 'total'
+exp_num = 'total'
 
 # data preprocess
 func.get_data(date_start, date_end, mv_day, target_type, get_official=get_official, get_oxcgrt=get_oxcgrt, get_UMD=get_UMD) if get_data_or_not == True else print('Not getting data.')

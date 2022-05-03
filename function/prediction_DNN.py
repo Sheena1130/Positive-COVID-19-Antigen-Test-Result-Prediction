@@ -639,7 +639,7 @@ def build_dataframe_of_real_data(target_range):
     # save as excel
     excel_path = './results/data_prediction'
     os.makedirs(excel_path, exist_ok = True)
-    pred_output.to_excel(f'{excel_path}/data_pred_{exp_name}.csv', index = False)
+    pred_output.to_csv(f'{excel_path}/data_pred_{exp_name}.csv', index = False)
 
 
 # In[ ]:

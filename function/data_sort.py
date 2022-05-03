@@ -36,11 +36,13 @@ def get_feature_list(target_name, corr_start, corr_end):
 
 def normalize_data(df):
     
-    for col in df.columns[2:]:
+    for col in df.columns[1:]:
         min_df = df[col].min()
         max_df = df[col].max()
         for i in range(len(df)):
             df[col].iloc[i] = (df[col].iloc[i]-min_df)/(max_df-min_df)
+    
+    print('df: ', df)
             
     return df
 
