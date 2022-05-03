@@ -41,6 +41,8 @@ def normalize_data(df):
         max_df = df[col].max()
         for i in range(len(df)):
             df[col].iloc[i] = (df[col].iloc[i]-min_df)/(max_df-min_df)
+    
+    print('df: ', df)
             
     return df
 
