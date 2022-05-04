@@ -491,7 +491,7 @@ def get_official_data(save_file = True):
 def get_UMD_data(date_start, date_end, dtype = 'smoothed', save_file = True):
     
     # get feature list
-    feat_df = pd.read_csv('../features.csv')
+    feat_df = pd.read_csv('./features.csv')
     feat = feat_df['features'].tolist()
     
     data_ext = []

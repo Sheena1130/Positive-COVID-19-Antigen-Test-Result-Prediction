@@ -92,7 +92,7 @@ exp_num = 'local'
 
 # data preprocess
 func.get_data(date_start, date_end, mv_day, target_type, get_official=get_official, get_oxcgrt=get_oxcgrt, get_UMD=get_UMD) if get_data_or_not == True else print('Not getting data.')
-func.calc_corr(train_start, train_end, train_num, mv_day, data_num_thres, corr_thres, get_UMD=get_UMD) if calc_corr_or_not == True else print('Not calculating correlation.')
+func.calc_corr(date_start, date_end, train_num, mv_day, data_num_thres, corr_thres, get_UMD=get_UMD) if calc_corr_or_not == True else print('Not calculating correlation.')
 target_range = func.data_sort(date_start, date_end, train_num, mv_day, day_num, get_official=get_official, get_oxcgrt=get_oxcgrt, get_UMD=get_UMD) if data_sort_or_not == True else print('Not sorting data.')
 
 # prediction
@@ -108,7 +108,7 @@ exp_num = 'total'
 
 # data preprocess
 func.get_data(date_start, date_end, mv_day, target_type, get_official=get_official, get_oxcgrt=get_oxcgrt, get_UMD=get_UMD) if get_data_or_not == True else print('Not getting data.')
-func.calc_corr(train_start, train_end, train_num, mv_day, data_num_thres, corr_thres, get_UMD=get_UMD) if calc_corr_or_not == True else print('Not calculating correlation.')
+func.calc_corr(date_start, date_end, train_num, mv_day, data_num_thres, corr_thres, get_UMD=get_UMD) if calc_corr_or_not == True else print('Not calculating correlation.')
 target_range = func.data_sort(date_start, date_end, train_num, mv_day, day_num, get_official=get_official, get_oxcgrt=get_oxcgrt, get_UMD=get_UMD) if data_sort_or_not == True else print('Not sorting data.')
 
 # prediction
